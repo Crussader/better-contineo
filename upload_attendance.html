@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Attendance</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mt-4">Upload Attendance</h1>
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="academic-year">Academic Year</label>
+                <select class="form-control" id="academic-year" name="academic-year">
+                    <option value="2021-2022">2021-2022</option>
+                    <option value="2022-2023">2022-2023</option>
+                    <option value="2023-2024">2023-2024</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="course">Course</label>
+                <select class="form-control" id="course" name="course">
+                    <option value="course1">Computer Organization</option>
+                    <option value="course2">Java</option>
+                    <option value="course3">Microcontrollers</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="section">Section</label>
+                <select class="form-control" id="section" name="section">
+                    <option value="section1">Section 1</option>
+                    <option value="section2">Section 2</option>
+                    <option value="section3">Section 3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="usn">USN</label>
+                <input type="text" class="form-control" id="usn" name="usn">
+            </div>
+            
+            <div class="form-group">
+                <label for="marks">Attendance</label>
+                <input type="number" class="form-control" id="attendance" name="attendance" onchange="handleChange(this);">
+            </div>
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+    </div>
+    <script>
+        function handleChange(input) {
+          if (input.value < 0) input.value = 0;
+          if (input.value > 100) input.value = 100;
+        }
+      </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
